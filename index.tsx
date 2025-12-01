@@ -553,7 +553,7 @@ const App: React.FC = () => {
             </div>
           )}
 
-          {/* Preview Statistics */}
+          {/* Preview Statistics  */}
           {data && status.step === 'done' && (
             <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
               <h3 className="text-lg font-medium text-gray-900 mb-4">Resumen para el {data.dateUsed}</h3>

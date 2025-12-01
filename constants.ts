@@ -4,7 +4,7 @@ export interface StationDef {
   codigo: string;
 }
 
-// Ordered list from Irun (1) to Brinkola (27)
+// Ordered list from Irun  (1) to Brinkola (27)
 export const GIPUZKOA_STATIONS: StationDef[] = [
   { orden: 1, estacion: "Irún", codigo: "11600" },
   { orden: 2, estacion: "Ventas de Irún", codigo: "11518" },

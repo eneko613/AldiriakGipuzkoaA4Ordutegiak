@@ -29,7 +29,7 @@ export interface Calendar {
 export interface CalendarDate {
   service_id: string;
   date: string; // YYYYMMDD
-  exception_type: string; // 1 = added, 2 = removed
+  exception_type: string; // 1 = added, 2 = removed 
 }
 
 export interface ParsedTrip {
