@@ -1,6 +1,6 @@
 import JSZip from 'jszip';
-import { GIPUZKOA_STATIONS } from '../constants';
-import { Calendar, CalendarDate, ParsedTrip, StopTime } from '../types';
+import { GIPUZKOA_STATIONS } from '../constants.ts';
+import { Calendar, CalendarDate, ParsedTrip, StopTime } from '../types.ts';
 
 // Helper to clean stop IDs
 const cleanId = (id: string) => id.trim();

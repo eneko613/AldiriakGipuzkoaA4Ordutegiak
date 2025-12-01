@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Upload, FileText, AlertCircle, Train, CheckCircle, CalendarDays } from 'lucide-react';
-import { parseGTFS } from './utils/gtfs';
-import { generatePDF } from './utils/pdf';
-import { ParsedTrip, ProcessingStatus } from './types';
+import { parseGTFS } from './utils/gtfs.ts';
+import { generatePDF } from './utils/pdf.ts';
+import { ParsedTrip, ProcessingStatus } from './types.ts';
 
 const App: React.FC = () => {
   const [status, setStatus] = useState<ProcessingStatus>({ step: 'idle', message: '' });

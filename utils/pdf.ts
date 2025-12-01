@@ -1,7 +1,7 @@
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
-import { GIPUZKOA_STATIONS, StationDef } from '../constants';
-import { ParsedTrip } from '../types';
+import { GIPUZKOA_STATIONS, StationDef } from '../constants.ts';
+import { ParsedTrip } from '../types.ts';
 
 export const generatePDF = (toBrinkola: ParsedTrip[], toIrun: ParsedTrip[], dateStr: string) => {
   const doc = new jsPDF({
