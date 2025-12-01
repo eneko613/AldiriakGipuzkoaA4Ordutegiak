@@ -25,13 +25,14 @@
 {
   "imports": {
     "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
     "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
     "jszip": "https://esm.sh/jszip@3.10.1",
-    "lucide-react": "https://esm.sh/lucide-react@0.263.1",
+    "lucide-react": "https://esm.sh/lucide-react@0.263.1?external=react",
     "jspdf": "https://esm.sh/jspdf@2.5.1",
-    "jspdf-autotable": "https://esm.sh/jspdf-autotable@3.5.29",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+    "jspdf-autotable": "https://esm.sh/jspdf-autotable@3.5.29"
   }
 }
 </script>
@@ -46,7 +47,6 @@
     </div>
 
     <!-- Script principal: type="text/babel" para que funcione TSX -->
-    <!-- Nota: Al usar Babel Standalone sin bundler, es mejor tener todo en un archivo para evitar problemas de importación -->
     <script type="text/babel" data-type="module" src="./index.tsx" data-presets="react,typescript"></script>
   </body>
 </html>

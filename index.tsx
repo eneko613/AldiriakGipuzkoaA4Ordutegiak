@@ -319,6 +319,9 @@ const generatePDF = (toBrinkola: ParsedTrip[], toIrun: ParsedTrip[], dateStr: st
     format: 'a4'
   });
 
+  // Safe access for autoTable in ESM/Browser environment
+  const autoTableFunc = (autoTable as any).default || autoTable;
+
   const generateTable = (title: string, trips: ParsedTrip[], stations: StationDef[]) => {
     const headRow = stations.map(s => s.estacion);
     
@@ -331,10 +334,8 @@ const generatePDF = (toBrinkola: ParsedTrip[], toIrun: ParsedTrip[], dateStr: st
       return row;
     });
 
-    doc.addPage();
-    if (doc.getNumberOfPages() === 1 && trips === toBrinkola) {
-        doc.deletePage(1); 
-        doc.addPage(); 
+    if (doc.getNumberOfPages() > 1 || (doc.getCurrentPageInfo().pageNumber === 1 && (doc as any).lastAutoTable)) {
+      doc.addPage();
     }
 
     doc.setFontSize(14);
@@ -342,7 +343,7 @@ const generatePDF = (toBrinkola: ParsedTrip[], toIrun: ParsedTrip[], dateStr: st
     doc.setFontSize(10);
     doc.text(`Fecha de circulación: ${dateStr}`, 14, 20);
 
-    autoTable(doc, {
+    autoTableFunc(doc, {
       startY: 25,
       head: [headRow],
       body: bodyRows,
