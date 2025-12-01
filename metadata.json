@@ -1,0 +1,5 @@
+{
+  "name": "Generador Horarios Cercanías Gipuzkoa",
+  "description": "Aplicación para generar horarios en PDF del núcleo de Cercanías Gipuzkoa a partir de archivos GTFS de Renfe.",
+  "requestFramePermissions": []
+}
